@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { TypingText, TitleText, InsightCard } from "../components";
-import styles from "../styles";
-import { staggerContainer } from "../utils/motion";
-import { insights } from "../constants";
+import { motion } from 'framer-motion';
+import { TypingText, TitleText, InsightCard } from '../components';
+import styles from '../styles';
+import { staggerContainer } from '../utils/motion';
+import { insights } from '../constants';
+
 const Insights = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
@@ -20,7 +21,7 @@ const Insights = () => (
         textStyles="text-center"
       />
       <div className="mt-[50px] flex flex-col gap-[30px]  ">
-        {insights.map((insights, index) => (
+        {insights.map((index) => (
           <InsightCard
             key={`insights-${index}`}
             {...insights}

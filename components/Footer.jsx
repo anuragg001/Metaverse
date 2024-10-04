@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { TypingText, TitleText, NewFeatures } from "../components";
-import styles from "../styles";
-import { footerVariants } from "../utils/motion";
-import { socials } from "../constants";
+import { motion } from 'framer-motion';
+import styles from '../styles';
+import { footerVariants } from '../utils/motion';
+import { socials } from '../constants';
+
 const Footer = () => (
   <motion.footer
     variants={footerVariants}
@@ -43,7 +43,7 @@ const Footer = () => (
           </p>
 
           <div className="flex gap-4">
-            {" "}
+            {' '}
             {socials.map((social) => (
               <img
                 key={social.name}
@@ -51,7 +51,7 @@ const Footer = () => (
                 alt={social.name}
                 className="w-[24px] h-[24px] object-contain cursor-pointer"
               />
-            ))}{" "}
+            ))}{' '}
           </div>
         </div>
       </div>

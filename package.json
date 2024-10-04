@@ -2,12 +2,13 @@
   "name": "metaverse13",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build && next export",
+  "start": "next start",
+  "export": "next export",
+  "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
+},
   "dependencies": {
     "eslint-config-next": "13.0.3",
     "framer-motion": "^7.6.7",
@@ -23,6 +24,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.19",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.2.4"
